@@ -3,23 +3,17 @@ package com.example.marketcodereader;
 import com.example.marketcodereader.models.Cart;
 import com.example.marketcodereader.models.Product;
 import com.example.marketcodereader.services.DBconnection;
+import javafx.beans.Observable;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+
+import java.util.Map;
 
 public class MainScreenController {
-    @FXML
-    private Button btnAdd;
-    @FXML
-    private Button btnPop;
-    @FXML
-    private Button btnPrintNote;
-    @FXML
-    private Button btnClose;
     @FXML
     private TextField edtBarCode;
     @FXML
@@ -27,38 +21,47 @@ public class MainScreenController {
     @FXML
     private ListView<String> listView;
 
-    private DBconnection db;
-    private Cart cart;
+    private final DBconnection db = new DBconnection();
+    private final Cart cart = new Cart();
 
 
     public void btnAddOnAction(ActionEvent event) {
-        db.connect();
-        Product product = db.getProduct(Long.valueOf(edtBarCode.getText()));
+        this.db.connect();
+        Product product = this.db.getProduct(Long.valueOf(edtBarCode.getText()));
         if(product != null){
-            cart.addProduct(product);
+            this.cart.addProduct(product);
             updateListView();
         }
-        db.close();
+        this.db.close();
     }
 
     private void updateListView() {
+        listView.getItems().clear();
+        for (Map.Entry<Product, Long> set: this.cart.getProductList().entrySet()){
+            String productText = set.getKey().getCode() + " " + set.getKey().getName() + " " + set.getKey().getPrice();
+            listView.getItems().add(productText);
+        }
+        txtTotal.setText(this.cart.getTotalItemsValue());
+        listView.getSelectionModel().selectionModeProperty().addListener(this::selectionChanged);
+
+    }
+
+    private void selectionChanged(Observable observable) {
+        ObservableList<String> selectedItem = listView.getSelectionModel().getSelectedItems();
     }
 
     public void btnPopOnAction(ActionEvent event) {
-        db.connect();
-        Product product = db.getProduct(Long.valueOf(edtBarCode.getText()));
+        this.db.connect();
+        Product product = this.db.getProduct(Long.valueOf(edtBarCode.getText()));
         if(product != null){
-            cart.removeProduct(product);
+            this.cart.removeProduct(product);
+            updateListView();
         }
-        db.close();
+        this.db.close();
     }
 
     public void btnPrintNoteOnAction(ActionEvent event) {
-        cart.printNote();
+        this.cart.printNote();
     }
 
-    public void btnCloseOnAction(ActionEvent event) {
-        Stage stage = (Stage) btnClose.getScene().getWindow();
-        stage.close();
-    }
 }

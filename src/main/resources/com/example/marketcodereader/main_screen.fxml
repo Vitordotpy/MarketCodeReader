@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
-
 
 <BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.marketcodereader.MainScreenController">
    <left>
-      <AnchorPane prefHeight="600.0" prefWidth="345.0" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="edtBarCode" layoutX="73.0" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Codigo de Barras" style="-fx-border-color: dodgerblue;">
+            <TextField fx:id="edtBarCode" layoutX="72.0" layoutY="288.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Codigo de Barras" style="-fx-border-color: dodgerblue;">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </TextField>
-            <HBox alignment="TOP_CENTER" layoutX="73.0" layoutY="546.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+            <HBox alignment="TOP_CENTER" layoutX="72.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                <children>
                   <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#btnAddOnAction" style="-fx-background-color: dodgerblue;" text="Adicionar">
                      <HBox.margin>
@@ -40,18 +36,23 @@
                   </Button>
                </children>
             </HBox>
+            <ImageView fitHeight="269.0" fitWidth="346.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/DcompTekLogo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="600.0" prefWidth="538.0" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <ListView fx:id="listView" layoutY="50.0" prefHeight="487.0" prefWidth="538.0" style="-fx-background-color: powderblue; -fx-border-color: dodgerblue; -fx-border-width: 2;">
+            <ListView fx:id="listView" prefHeight="537.0" prefWidth="600.0" style="-fx-border-color: black; -fx-border-width: 2;">
                <padding>
                   <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                </padding>
             </ListView>
-            <Pane layoutY="535.0" prefHeight="65.0" prefWidth="538.0" style="-fx-border-color: dodgerblue; -fx-border-width: 2;">
+            <Pane layoutY="535.0" prefHeight="67.0" prefWidth="600.0" style="-fx-border-color: black; -fx-border-width: 2;">
                <children>
                   <Label fx:id="txtTotal" layoutX="14.0" layoutY="14.0" text="Total:">
                      <font>
@@ -61,10 +62,9 @@
                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                      </padding>
                   </Label>
-                  <Button fx:id="btnPrintNote" layoutX="433.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnPrintNoteOnAction" text="Imprimir Nota" />
+                  <Button fx:id="btnPrintNote" layoutX="495.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnPrintNoteOnAction" text="Imprimir Nota" />
                </children>
             </Pane>
-            <Button fx:id="btnClose" layoutX="472.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnCloseOnAction" text="Fechar" />
          </children>
       </AnchorPane>
    </right>

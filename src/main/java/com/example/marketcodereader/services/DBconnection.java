@@ -8,8 +8,12 @@ import java.sql.Statement;
 public class DBconnection {
     private java.sql.Connection connection;
 
+    public DBconnection() {
+    }
+
     public boolean connect(){
         try {
+            Class.forName("org.sqlite.JDBC");
             String path = "jdbc:sqlite:database/products.db";
             connection = DriverManager.getConnection(path);
             return true;
