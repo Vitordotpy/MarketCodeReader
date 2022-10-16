@@ -11,6 +11,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 public class MainScreenController {
@@ -23,6 +26,8 @@ public class MainScreenController {
 
     private final DBconnection db = new DBconnection();
     private final Cart cart = new Cart();
+
+    private String selectedItem;
 
 
     public void btnAddOnAction(ActionEvent event) {
@@ -37,8 +42,8 @@ public class MainScreenController {
 
     private void updateListView() {
         listView.getItems().clear();
-        for (Map.Entry<Product, Long> set: this.cart.getProductList().entrySet()){
-            String productText = set.getKey().getCode() + " " + set.getKey().getName() + " " + set.getKey().getPrice();
+        for (Product product : cart.getProductList()){
+            String productText = product.getCode() + "/" + product.getName() + "/" + product.getPrice();
             listView.getItems().add(productText);
         }
         txtTotal.setText(this.cart.getTotalItemsValue());
@@ -47,21 +52,22 @@ public class MainScreenController {
     }
 
     private void selectionChanged(Observable observable) {
-        ObservableList<String> selectedItem = listView.getSelectionModel().getSelectedItems();
+        selectedItem = listView.getSelectionModel().getSelectedItems().get(0);
     }
 
     public void btnPopOnAction(ActionEvent event) {
-        this.db.connect();
-        Product product = this.db.getProduct(Long.valueOf(edtBarCode.getText()));
-        if(product != null){
-            this.cart.removeProduct(product);
+        if (selectedItem!= null){
+            listView.getItems().remove(selectedItem);
+            List<String> colunms = Arrays.stream(selectedItem.split("/")).toList();
+            Product product = new Product(Long.valueOf(colunms.get(0)), String.valueOf(colunms.get(0)), Double.parseDouble(colunms.get(0)));
+            cart.removeProduct(product);
             updateListView();
         }
-        this.db.close();
     }
 
     public void btnPrintNoteOnAction(ActionEvent event) {
         this.cart.printNote();
+        updateListView();
     }
 
 }
