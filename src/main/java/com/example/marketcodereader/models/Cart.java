@@ -1,13 +1,9 @@
 package com.example.marketcodereader.models;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Cart {
     private final ArrayList<Product> productList;
-    private Long productAmmout = 1L;
-    private double total = 0;
 
     public Cart() {
         this.productList = new ArrayList<>();
@@ -22,10 +18,11 @@ public class Cart {
     }
 
     public String getTotalItemsValue(){
+        double total = 0;
         for (Product product: productList){
             total += product.getPrice();
         }
-        return String.valueOf(total);
+        return String.format("Total: R$ %.2f", total);
     }
 
     public void printNote(){

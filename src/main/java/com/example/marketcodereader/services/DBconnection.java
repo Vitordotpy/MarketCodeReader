@@ -11,22 +11,20 @@ public class DBconnection {
     public DBconnection() {
     }
 
-    public boolean connect(){
+    public void connect(){
         try {
             Class.forName("org.sqlite.JDBC");
-            String path = "jdbc:sqlite:database/products.db";
+            String path = "jdbc:sqlite:src/main/java/com/example/marketcodereader/database/products.db";
             connection = DriverManager.getConnection(path);
-            return true;
         }catch (Exception e){
             e.printStackTrace();
-            return false;
         }
     }
 
     public Product getProduct(Long barCode){
         try {
             Statement statement = connection.createStatement();
-            String sql = "SELECT code, name, price FROM products WHERE code="+barCode;
+            String sql = String.format("SELECT code, name, price FROM products WHERE code='%s'", barCode);
             ResultSet rs = statement.executeQuery(sql);
             return new Product(rs.getLong("code"), rs.getString("name"), rs.getDouble("price"));
         }catch (Exception e){
