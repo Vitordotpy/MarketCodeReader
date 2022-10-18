@@ -5,6 +5,7 @@ public class Product {
     private String name;
     private double price;
 
+
     public Product(Long code, String name, double price) {
         this.code = code;
         this.name = name;
