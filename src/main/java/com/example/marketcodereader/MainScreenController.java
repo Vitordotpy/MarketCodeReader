@@ -3,9 +3,6 @@ package com.example.marketcodereader;
 import com.example.marketcodereader.models.Cart;
 import com.example.marketcodereader.models.Product;
 import com.example.marketcodereader.services.DBconnection;
-import javafx.beans.Observable;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -15,6 +12,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainScreenController {
+    @FXML
+    private Button btnPop;
     @FXML
     private TextField edtBarCode;
     @FXML
@@ -33,7 +32,7 @@ public class MainScreenController {
     private final DBconnection db = new DBconnection();
     private final Cart cart = new Cart();
 
-    private String selectedItem;
+    private Product selectedItem;
 
 
 
@@ -59,14 +58,19 @@ public class MainScreenController {
             tableView.getItems().add(product);
         }
         txtTotal.setText(this.cart.getTotalItemsValue());
+
+        tableView.setOnMouseClicked(mouseEvent -> {
+            selectedItem = tableView.getSelectionModel().getSelectedItems().get(0);
+            btnPop.setVisible(true);
+        });
     }
 
     public void btnPopOnAction(ActionEvent event) {
         if (selectedItem!= null){
-            listView.getItems().remove(selectedItem);
-            List<String> colunms = Arrays.stream(selectedItem.split("/")).toList();
-            cart.removeProduct(db.getProduct(Long.valueOf(colunms.get(0))));
+            tableView.getItems().remove(selectedItem);
+            cart.removeProduct(selectedItem);
             updateListView();
+            btnPop.setVisible(false);
         }
     }
 
