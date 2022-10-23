@@ -25,7 +25,7 @@ public class Cart {
         return String.format("Total: R$ %.2f", total);
     }
 
-    public void printNote(){
+    public void clearCart(){
         productList.clear();
     }
     public ArrayList<Product> getProductList(){
