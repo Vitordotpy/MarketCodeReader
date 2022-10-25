@@ -18,11 +18,11 @@ MarketCodeReader > src > main > java > com > example > marketcodereade
 ```
 # 3º) Executar o java compiler da seguinte forma:
 ```bash
-javac --module-path "Path to your javafx lib folder" --add-modules javafx.controls,javafx.fxml Application.java
+javac --module-path "MarketCodeReader > src > main > java > com > example > marketcodereader > utils > javafx-sdk-17.0.2 > lib"(sem aspas) --add-modules javafx.controls,javafx.fxml Application.java
 ```
 # 4º) Executar a aplicação
 ```bash
-java --module-path "Path to your javafx lib folder" --add-modules javafx.controls,javafx.fxml Application
+java --module-path "MarketCodeReader > src > main > java > com > example > marketcodereader > utils > javafx-sdk-17.0.2 > lib"(sem aspas) --add-modules javafx.controls,javafx.fxml Application
 ```
 # 5ª) Isso tudo irá gerar um arquivo .exe dentro da pasta do programa, basta executá-lo.
 
