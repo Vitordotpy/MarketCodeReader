@@ -4,7 +4,7 @@
 
 ```bash
 # 1º) Instalar o java jdk 17.0.1 que está na pasta utils
-command install
+seguir o caminho: MarketCodeReader > src > main > java > com > example > marketcodereader > utils
 
 # 2º) Abrir o terminal e executar o java compiler da seguinte forma:
 javac --module-path "Path to your javafx lib folder" --add-modules javafx.controls,javafx.fxml Application.java
