@@ -33,7 +33,7 @@ java --module-path "MarketCodeReader > src > main > java > com > example > marke
 ```
 ### Caminho que deve ser colocado no texto dentro das aspas, no comando do 4º passo
 ![image](https://user-images.githubusercontent.com/58920070/197678454-61c59733-95b7-4cc3-a9f7-ee00118b90aa.png)
-![image](https://user-images.githubusercontent.com/58920070/197677575-1b7accbe-07f3-405a-a1cb-f3166ef0568b.png)
+![image](https://user-images.githubusercontent.com/58920070/197677974-9088c46f-4947-4684-a9d8-103fcdc64383.png)
 
 ## 5ª) Isso tudo irá gerar um arquivo .exe dentro da pasta do programa, basta executá-lo.
 
