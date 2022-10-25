@@ -24,5 +24,5 @@ javac --module-path "Path to your javafx lib folder" --add-modules javafx.contro
 ```bash
 java --module-path "Path to your javafx lib folder" --add-modules javafx.controls,javafx.fxml Application
 ```
-# 5ª) Isso tudo irá gerar um arquivo exe dentro da pasta do programa, basta executá-lo.
+# 5ª) Isso tudo irá gerar um arquivo .exe dentro da pasta do programa, basta executá-lo.
 
