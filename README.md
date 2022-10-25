@@ -16,13 +16,13 @@ sudo apt install openjdk-17-jdk-headless
 ```bash
 MarketCodeReader > src > main > java > com > example > marketcodereade
 ```
-# 3º) Com terminal aberto na pasta do 2º passo, executar o Java Compiler da seguinte forma:
+## 3º) Com terminal aberto na pasta do 2º passo, executar o Java Compiler da seguinte forma:
 ```bash
 javac --module-path "MarketCodeReader > src > main > java > com > example > marketcodereader > utils > javafx-sdk-17.0.2 > lib"(sem aspas) --add-modules javafx.controls,javafx.fxml Application.java
 ```
-# 4º) Com terminal aberto na pasta do 2º passo, Executar a aplicação:
+## 4º) Com terminal aberto na pasta do 2º passo, executar a aplicação:
 ```bash
 java --module-path "MarketCodeReader > src > main > java > com > example > marketcodereader > utils > javafx-sdk-17.0.2 > lib"(sem aspas) --add-modules javafx.controls,javafx.fxml Application
 ```
-# 5ª) Isso tudo irá gerar um arquivo .exe dentro da pasta do programa, basta executá-lo.
+## 5ª) Isso tudo irá gerar um arquivo .exe dentro da pasta do programa, basta executá-lo.
 
