@@ -17,7 +17,7 @@ sudo apt install openjdk-17-jdk-headless
 MarketCodeReader > src > main > java > com > example > marketcodereade
 ```
 ![image](https://user-images.githubusercontent.com/58920070/197677432-cd621815-fb70-40f7-bd89-b48c9b659b63.png)
-![image](https://user-images.githubusercontent.com/58920070/197677575-1b7accbe-07f3-405a-a1cb-f3166ef0568b.png)
+![image](https://user-images.githubusercontent.com/58920070/197686828-f0f1d4f4-1498-4213-8ffd-3febb3add88e.png)
 
 ## 3º) Com terminal aberto na pasta do 2º passo, executar o Java Compiler da seguinte forma:
 ```bash
