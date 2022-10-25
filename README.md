@@ -10,7 +10,10 @@ MarketCodeReader > src > main > java > com > example > marketcodereader > utils
 ## Se for Linux, usar o comando para instalar a versão 17:
 sudo apt install openjdk-17-jdk-headless
 
-# 2º) Abrir o terminal e executar o java compiler da seguinte forma:
+# 2ª) Abrir o terminal na pasta que tem o arquivo **Application.java** com caminho: 
+MarketCodeReader > src > main > java > com > example > marketcodereade
+
+# 3º) Executar o java compiler da seguinte forma:
 javac --module-path "Path to your javafx lib folder" --add-modules javafx.controls,javafx.fxml Application.java
 
 # 3º) Executar a aplicação
