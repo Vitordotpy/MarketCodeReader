@@ -12,7 +12,7 @@ MarketCodeReader > src > main > java > com > example > marketcodereader > utils
 ```bash
 sudo apt install openjdk-17-jdk-headless
 ```
-## 2ª) Abrir o terminal na pasta que tem o arquivo Application.java com caminho: 
+## 2ª) Abrir o terminal na pasta que tem o arquivo **Application.java** com caminho: 
 ```bash
 MarketCodeReader > src > main > java > com > example > marketcodereade
 ```
