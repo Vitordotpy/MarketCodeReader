@@ -36,6 +36,8 @@ public class MainScreenController implements Initializable {
     private TableColumn<Product, String> tbColumnName;
     @FXML
     private TableColumn<Product, String> tbColumnPrice;
+    @FXML
+    private Label txtProductNotExists;
 
     private final DBconnection db = new DBconnection();
     private final Cart cart = new Cart();
@@ -48,6 +50,9 @@ public class MainScreenController implements Initializable {
         if(product != null){
             this.cart.addProduct(product);
             updateListView();
+            txtProductNotExists.setVisible(false);
+        }else {
+            txtProductNotExists.setVisible(true);
         }
         this.db.close();
     }
