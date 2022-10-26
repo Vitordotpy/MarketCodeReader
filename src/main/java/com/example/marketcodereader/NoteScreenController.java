@@ -31,6 +31,6 @@ public class NoteScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Note note = new Note(Data.client, Data.cart);
-        txtNote.setText(note.print());
+        txtNote.setText(note.toString());
     }
 }
