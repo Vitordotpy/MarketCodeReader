@@ -25,7 +25,8 @@ public class NoteTest {
                 "Nome: Alyson\n" +
                         "CPF/CNPJ: XXX.XXX.XXX-XX\n" +
                         "Produtos: \n" +
-                        "carne 37.99\n",
-                note.print());
+                        "carne R$ 37.99\n"+
+                "Volte Sempre!",
+                note.toString());
     }
 }
