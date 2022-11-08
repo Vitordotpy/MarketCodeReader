@@ -4,6 +4,7 @@ import com.example.marketcodereader.models.Cart;
 import com.example.marketcodereader.models.Data;
 import com.example.marketcodereader.models.Product;
 import com.example.marketcodereader.services.DBconnection;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,27 +36,32 @@ public class MainScreenController implements Initializable {
     private TableColumn<Product, String> tbColumnName;
     @FXML
     private TableColumn<Product, String> tbColumnPrice;
+    @FXML
+    private Label txtProductNotExists;
 
     private final DBconnection db = new DBconnection();
     private final Cart cart = new Cart();
     private Product selectedItem;
 
 
-    public void btnAddOnAction(ActionEvent event) {
+    public void btnAddOnAction() {
         this.db.connect();
         Product product = this.db.getProduct(Long.valueOf(edtBarCode.getText()));
         if(product != null){
             this.cart.addProduct(product);
             updateListView();
+            txtProductNotExists.setVisible(false);
+        }else {
+            txtProductNotExists.setVisible(true);
         }
         this.db.close();
     }
 
 
     private void updateListView() {
-        tbColumnCode.setCellValueFactory(new PropertyValueFactory<Product, Long>("code"));
-        tbColumnName.setCellValueFactory(new PropertyValueFactory<Product, String>("name"));
-        tbColumnPrice.setCellValueFactory(new PropertyValueFactory<Product, String>("price"));
+        tbColumnCode.setCellValueFactory(new PropertyValueFactory<>("code"));
+        tbColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tbColumnPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         tableView.getItems().clear();
 
@@ -65,12 +71,16 @@ public class MainScreenController implements Initializable {
         txtTotal.setText(this.cart.getTotalItemsValue());
 
         tableView.setOnMouseClicked(mouseEvent -> {
-            selectedItem = tableView.getSelectionModel().getSelectedItems().get(0);
-            btnPop.setVisible(true);
+            ObservableList<Product> items = tableView.getSelectionModel().getSelectedItems();
+            if (items.size() > 0){
+                selectedItem = items.get(0);
+                btnPop.setVisible(true);
+            }
+
         });
     }
 
-    public void btnPopOnAction(ActionEvent event) {
+    public void btnPopOnAction() {
         if (selectedItem!= null){
             tableView.getItems().remove(selectedItem);
             cart.removeProduct(selectedItem);

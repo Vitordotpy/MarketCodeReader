@@ -28,7 +28,6 @@ public class DBconnection {
             ResultSet rs = statement.executeQuery(sql);
             return new Product(rs.getLong("code"), rs.getString("name"), rs.getDouble("price"));
         }catch (Exception e){
-            e.printStackTrace();
             return null;
         }
     }

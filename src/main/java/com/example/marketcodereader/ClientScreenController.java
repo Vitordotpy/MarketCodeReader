@@ -38,7 +38,7 @@ public class ClientScreenController implements Initializable {
     }
 
     public void printBtnSetVisibility(){
-        btnPrint.setVisible((edtClientName.getText().length() > 0 && (edtCPF.getText().length() == 11 || edtCPF.getText().length() == 18)) || (edtCPF.getText().equals("95.741.281/0001-40") && edtClientName.getText().equals("DCOMPMarket")));
+        btnPrint.setVisible((edtClientName.getText().length() > 0 && (edtCPF.getText().length() == 11 || edtCPF.getText().length() == 14)) || (edtCPF.getText().equals("95741281000140") && edtClientName.getText().equals("DCOMPMarket")));
     }
 
     public void edtCPFOnTextChange(KeyEvent inputMethodEvent) {
