@@ -9,5 +9,4 @@ module com.example.marketcodereader {
     opens com.example.marketcodereader.models;
     opens com.example.marketcodereader to javafx.fxml;
     exports com.example.marketcodereader;
-    exports com.example.marketcodereader.test;
 }

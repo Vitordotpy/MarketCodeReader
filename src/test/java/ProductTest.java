@@ -1,5 +1,3 @@
-package com.example.marketcodereader.test;
-
 import com.example.marketcodereader.models.Product;
 import org.junit.Assert;
 import org.junit.Test;
