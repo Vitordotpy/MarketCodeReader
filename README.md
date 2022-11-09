@@ -1,50 +1,36 @@
 # MarketCodeReader
 
-# Como executar o projeto(imagens e texto)
+# Como executar o projeto(imagens, textoe vídeo)
 
-
-## 1º) Necessário ter o java jdk 17.0.1 instalado na máquina
-### Se for windows, usar o executável que está no caminho: 
+## 1º) Necessário ter o java jdk 17.0.1 ou superior instalado na máquina
+### Caso esteja usando Windows, é necessário entrar no site da Oracle e baixar a versão:
 ```bash
-MarketCodeReader > src > main > java > com > example > marketcodereader > utils
+https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
 ```
-### Se for Linux, usar o comando para instalar a versão 17:
+### Se for Linux, basta usar o comando para instalar a versão 17:
 ```bash
 sudo apt install openjdk-17-jdk-headless
 ```
-## 2ª) Abrir o terminal na pasta que tem o arquivo **Application.java** com caminho:
+## 2ª) Necessário ter o Maven instalado, é um gerenciador de pacotes java. Link para documentação:
 ```bash
-MarketCodeReader > src > main > java > com > example > marketcodereade
+https://maven.apache.org/install.html
 ```
-![image](https://user-images.githubusercontent.com/58920070/197677432-cd621815-fb70-40f7-bd89-b48c9b659b63.png)
-### Windows
-![image](https://user-images.githubusercontent.com/58920070/197686828-f0f1d4f4-1498-4213-8ffd-3febb3add88e.png)
-### Linux
-![image](https://user-images.githubusercontent.com/58920070/197687726-14b486ed-0fce-4b36-995a-01aded48c22f.png)
-
-## 3º) Com terminal aberto na pasta do 2º passo, executar o Java Compiler da seguinte forma:
+## 3ª) Abrir na pasta do projeto:
 ```bash
-javac --module-path "MarketCodeReader > src > main > java > com > example > marketcodereader > utils > javafx-sdk-17.0.2 > lib"(sem aspas) --add-modules javafx.controls,javafx.fxml Application.java
+cd C:\Projeto_POO 
 ```
-### Caminho que deve ser colocado no texto dentro das aspas, no comando do 3º passo
-![image](https://user-images.githubusercontent.com/58920070/197677974-9088c46f-4947-4684-a9d8-103fcdc64383.png)
-### Windows
-![image](https://user-images.githubusercontent.com/58920070/197687189-a508e114-8303-4be9-bead-72a2766c1a10.png)
-### Linux
-![image](https://user-images.githubusercontent.com/58920070/197688192-c23036fd-5a08-414c-bf1b-46f1e53995ab.png)
-
-## 4º) Com terminal aberto na pasta do 2º passo, executar a aplicação:
+![image](https://user-images.githubusercontent.com/58920070/200817281-e229f0c7-81a8-4957-abbe-b16ee4f3a19b.png)
+![image](https://user-images.githubusercontent.com/58920070/200817386-b8c29b78-6840-4ece-ae7c-57ac0d0745d3.png)
+## 4ª) Verificar se o Maven e Java estão instalados
+### Verificar se o Java está instalado:
 ```bash
-java --module-path "MarketCodeReader > src > main > java > com > example > marketcodereader > utils > javafx-sdk-17.0.2 > lib"(sem aspas) --add-modules javafx.controls,javafx.fxml Application
+java --version
 ```
-### Caminho que deve ser colocado no texto dentro das aspas, no comando do 4º passo
-![image](https://user-images.githubusercontent.com/58920070/197677974-9088c46f-4947-4684-a9d8-103fcdc64383.png)
-### Windows
-![image](https://user-images.githubusercontent.com/58920070/197687334-5669e400-b69b-47f6-875f-0eef6a713272.png)
-### Linux
-![image](https://user-images.githubusercontent.com/58920070/197688369-5b72776f-37a1-46af-b3fc-0dc71ece6da1.png)
+### Verificar se o Maven está instalado:
+```bash
+mvn --version
+```
+![image](https://user-images.githubusercontent.com/58920070/200893806-a93cf56e-10f7-4cef-ab30-9731fef4d139.png)
 
-## 5ª) Isso tudo irá gerar um arquivo .exe dentro da pasta do programa, basta executá-lo.
-![image](https://user-images.githubusercontent.com/58920070/197687412-3e349ad3-ff13-401c-979f-c3d7cba2bb14.png)
 
 
