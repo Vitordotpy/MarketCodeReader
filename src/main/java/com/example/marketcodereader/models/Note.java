@@ -11,7 +11,7 @@ public class Note extends Client{
     public String toString(){
         String string = "Nome: "+ getName() +"\n" + "CPF/CNPJ: " + getCPF() +"\n" + "Produtos: " + "\n";
         for (Product product : cart.getProductList()){
-            string = string.concat(product.getName() + " R$ " + product.getPrice() + "\n");
+            string = string.concat(String.format("%s R$ %.2f \n",product.getName(),product.getPrice()));
         }
         string =string.concat("Volte Sempre!");
         return string;
