@@ -2,7 +2,7 @@
 
 # Como executar o projeto(imagens, textoe vídeo)
 
-##Extra, link do vídeo tutorial:
+## Extra, link do vídeo tutorial:
 
 ## 1º) Necessário ter o java jdk 17.0.1 ou superior instalado na máquina
 ### Caso esteja usando Windows, é necessário entrar no site da Oracle e baixar a versão:
