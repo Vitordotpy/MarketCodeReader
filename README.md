@@ -31,6 +31,10 @@ java --version
 mvn --version
 ```
 ![image](https://user-images.githubusercontent.com/58920070/200893806-a93cf56e-10f7-4cef-ab30-9731fef4d139.png)
-
+## 5ª) Rodando o projeto:
+### Para executar o projeto, segue o comando. OBS: é necessário estar na pasta do projeto:
+```bash
+mvn clean javafx:run
+```
 
 
