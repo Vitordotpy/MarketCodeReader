@@ -3,7 +3,7 @@
 # Como executar o projeto(imagens, textoe vídeo)
 
 ## Extra, link do vídeo tutorial:
-
+https://drive.google.com/drive/folders/1rTcuIUmP6Gx_guCwvRim3QN_rGMHhL9c?usp=share_link
 ## 1º) Necessário ter o java jdk 17.0.1 ou superior instalado na máquina
 ### Caso esteja usando Windows, é necessário entrar no site da Oracle e baixar a versão:
 ```bash
@@ -59,3 +59,5 @@ mvn clean javafx:run
 ### E ao clicar em imprimir, uma nota é gerada como segue na imagem a seguir. Ao clicar em voltar, o cliente retorna a págiina inicial, onde ele pode fazer uma nova compra
 ![image](https://user-images.githubusercontent.com/58920070/200897623-ffc9dbd7-7b58-47c9-84a8-dbbc3d1a343e.png)
 
+## Extra, link do vídeo tutorial:
+https://drive.google.com/drive/folders/1rTcuIUmP6Gx_guCwvRim3QN_rGMHhL9c?usp=share_link
