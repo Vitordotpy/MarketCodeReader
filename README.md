@@ -37,5 +37,23 @@ mvn --version
 mvn clean javafx:run
 ```
 ![image](https://user-images.githubusercontent.com/58920070/200894533-4686ae88-3021-42c8-8696-4aa7dbb5c19b.png)
+## 6ª) Com o projeto aberto:
+### Nele é possível passar números de 1 até 8, que são códigos para produtos: 
+- arroz -> 1
+- feijao -> 2
+- cuzcuz -> 3
+- carne -> 4
+- frango -> 5
+- cebola(unidade) -> 6
+- banana(duzia) -> 7
+- leite condensado -> 8
 
+![image](https://user-images.githubusercontent.com/58920070/200896464-c6c71d1b-6a5b-4679-b213-40442b285c15.png)
+
+### Ao clicar em imprimir nota, o cliente é enviado para outra tela, na qual ele passsa o nome da nota e seu CPF/CNPJ
+
+![image](https://user-images.githubusercontent.com/58920070/200897368-ef36d343-2d5c-4db7-b077-74ab63562c66.png)
+
+### E ao clicar em imprimir, uma nota é gerada como segue na imagem a seguir. Ao clicar em voltar, o cliente retorna a págiina inicial, onde ele pode fazer uma nova compra
+![image](https://user-images.githubusercontent.com/58920070/200897623-ffc9dbd7-7b58-47c9-84a8-dbbc3d1a343e.png)
 
