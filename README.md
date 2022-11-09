@@ -36,5 +36,6 @@ mvn --version
 ```bash
 mvn clean javafx:run
 ```
+![image](https://user-images.githubusercontent.com/58920070/200894533-4686ae88-3021-42c8-8696-4aa7dbb5c19b.png)
 
 
