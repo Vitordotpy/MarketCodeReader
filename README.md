@@ -17,7 +17,7 @@ sudo apt install openjdk-17-jdk-headless
 ```bash
 https://maven.apache.org/install.html
 ```
-## 3ª) Abrir na pasta do projeto:
+## 3ª) Abrir na pasta do projeto no terminal:
 ```bash
 cd C:\Projeto_POO 
 ```
