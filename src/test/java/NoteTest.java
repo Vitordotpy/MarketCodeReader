@@ -20,11 +20,12 @@ public class NoteTest {
 
         Note note = new Note(client, cart);
         Assert.assertEquals(
-                "Nome: Alyson\n" +
-                        "CPF/CNPJ: XXX.XXX.XXX-XX\n" +
-                        "Produtos: \n" +
-                        "carne R$ 37.99\n"+
-                "Volte Sempre!",
+                """
+                        Nome: Alyson
+                        CPF/CNPJ: XXX.XXX.XXX-XX
+                        Produtos:\s
+                        carne R$ 37,99
+                        Volte Sempre!""",
                 note.toString());
     }
 }

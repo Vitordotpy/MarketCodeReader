@@ -2,7 +2,6 @@ module com.example.marketcodereader {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-    requires sqlite.jdbc;
     requires junit;
 
 
