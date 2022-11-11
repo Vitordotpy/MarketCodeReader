@@ -1,6 +1,6 @@
 # MarketCodeReader
 
-# Como executar o projeto(imagens, textoe vídeo)
+# Como executar o projeto(imagens, texto e vídeo)
 
 ## Extra, link do vídeo tutorial:
 https://drive.google.com/drive/folders/1rTcuIUmP6Gx_guCwvRim3QN_rGMHhL9c?usp=share_link
@@ -40,7 +40,7 @@ mvn clean javafx:run
 ```
 ![image](https://user-images.githubusercontent.com/58920070/200894533-4686ae88-3021-42c8-8696-4aa7dbb5c19b.png)
 ## 6ª) Com o projeto aberto:
-### Nele é possível passar números de 1 até 8, que são códigos para produtos: 
+### Nele é possível passar números de 1 até 20, que são códigos para produtos: 
 - arroz -> 1
 - feijao -> 2
 - cuzcuz -> 3
@@ -49,6 +49,18 @@ mvn clean javafx:run
 - cebola(unidade) -> 6
 - banana(duzia) -> 7
 - leite condensado -> 8
+- molho de tomate -> 9
+- refrigerante(1L) -> 10
+- cerveja(lata) -> 11
+- achocolatado -> 12
+- iogurte -> 13
+- pizza pronta(familia) -> 14
+- lasanha de microondas -> 15
+- frango desfiado -> 16
+- salgado -> 17
+- cenoura -> 18
+- macarrão -> 19
+- abóbora -> 20
 
 ![image](https://user-images.githubusercontent.com/58920070/200896464-c6c71d1b-6a5b-4679-b213-40442b285c15.png)
 
