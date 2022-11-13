@@ -28,7 +28,7 @@ public class ClientScreenController implements Initializable {
     private Button btnPrint;
 
     public void btnPrintOnAction(ActionEvent event) throws IOException {
-        Data.client = new Client(edtClientName.getText(), edtCPF.getText());
+        Data.client = new Client(edtClientName.getText(), edtCPF.getText(), Data.cart);
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("note_screen.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);

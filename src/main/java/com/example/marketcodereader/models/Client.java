@@ -1,27 +1,28 @@
 package com.example.marketcodereader.models;
 
 public class Client {
-    private String name;
-    private String CPF;
+    private final String name;
+    private final String CPF;
 
-    public Client(String name, String CPF) {
+    private final Cart cart;
+
+    public Client(String name, String CPF, Cart cart) {
         this.name = name;
         this.CPF = CPF;
+        this.cart = cart;
+    }
+
+    public Cart getCart(){
+        return cart;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
-    }
 }

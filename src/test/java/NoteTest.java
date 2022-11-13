@@ -11,14 +11,13 @@ public class NoteTest {
 
     @Test
     public void print() {
-        Client client = new Client("Alyson", "XXX.XXX.XXX-XX");
-
-        Product product1 = new Product((long) 4, "carne", 37.99);
-
         Cart cart = new Cart();
+        Product product1 = new Product((long) 4, "carne", 37.99);
         cart.addProduct(product1);
+        Client client = new Client("Alyson", "XXX.XXX.XXX-XX", cart);
 
-        Note note = new Note(client, cart);
+        Note note = new Note(client);
+
         Assert.assertEquals(
                 """
                         Nome: Alyson
