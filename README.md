@@ -12,7 +12,7 @@ cada produto tem ou deve ter por parte do empacotador do mercado.
 - As bibliotecas JavaFX
 - A biblioteca SQLite
 - A ferramenta de build Maven
-- Biblioteca de testess JUnit
+- Biblioteca de testes JUnit
 
 # Como executar o projeto(imagens, texto e vídeo)
 
