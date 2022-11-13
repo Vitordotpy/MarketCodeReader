@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: com.example.marketcodereader.Application
+Main-Class: com.example.marketcodereader.Main
 

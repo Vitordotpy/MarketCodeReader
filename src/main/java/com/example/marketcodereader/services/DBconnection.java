@@ -14,7 +14,7 @@ public class DBconnection {
     public void connect(){
         try {
             Class.forName("org.sqlite.JDBC");
-            String path = "jdbc:sqlite:src/main/java/com/example/marketcodereader/database/products.db";
+            String path = "jdbc:sqlite:products.db";
             connection = DriverManager.getConnection(path);
         }catch (Exception e){
             e.printStackTrace();
