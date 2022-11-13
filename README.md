@@ -71,6 +71,7 @@ mvn clean javafx:run
 ```bash
 mvn test
 ```
+![image](https://user-images.githubusercontent.com/58920070/201537033-acefbcf1-4fbb-438d-96da-e17b570959e2.png)
 ![image](https://user-images.githubusercontent.com/58920070/201536922-6bd1cf50-ca1a-457c-a736-bd9e0a40f2f4.png)
 # Documentação das funcionalidades do projeto
 ## 1º) Nele é possível passar números de 1 até 20, que são códigos para produtos: 
